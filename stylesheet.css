@@ -1,0 +1,482 @@
+:root {
+    --clr-primary: rgb(54, 199, 126);
+    --clr-light: #f4f4f4;
+    --clr-dark: #333;
+    --clr-warning: rgb(99, 36, 36);
+    --Dred: rgb(165,29,41);
+    --Vred:rgb(187,31,14);
+    --gold: rgb(212,170,59);
+    --gold2: rgba(214, 177, 74, 0.671);
+    --Ateal: rgb(22, 206, 206);
+}
+  
+*,
+*::before,
+*::after {
+    font-family: inherit;
+    box-sizing: border-box;
+}
+  
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+  
+  
+nav {
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 6vh;
+    width: 100%;
+    height: 4.25em;
+    background-color: white;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/006/852/757/original/black-gold-marbling-texture-design-for-poster-brochure-invitation-cover-book-catalog-illustration-free-vector.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    box-shadow: 0 2.5px 0 rgba(214, 177, 74, 0.671);
+    z-index: 3;
+}
+
+.title {
+    font-family: "Dancing Script", sans-serif;
+    grid-area: header;
+    text-align: center;
+    font-size: calc(10vh);
+    font-weight: 900;
+    color: rgba(245,200,94,255);
+    letter-spacing: 2px;
+    /* margin: 0.5em 0.2em 0.5em 0; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    /* text-align: center; */
+    font-weight: 300;
+    font-size: 1.5rem;
+    /* background-color: var(--clr-primary); */
+    /* color: black; */
+    background-image: url('https://www.christies.com/img/LotImages/2014/NYR/2014_NYR_03459_0047_004(a_louis_xvi_ormolu_blued_steel_and_sevres_porcelain-mounted_tulipwood074107).jpg?mode=max');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+#content {
+    display: grid; 
+    grid-template-columns: repeat(8, minmax(100px, 300px));
+    grid-template-rows: repeat(5, minmax(180px, auto));
+    grid-gap: 2px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* should prob remove  
+ #content div{
+    background: #3bbced; 
+    padding: 30px; 
+}
+
+#content div:nth-child(even){
+     background: #777; 
+} */
+
+form {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 2px;
+}
+
+.btn {
+    cursor: pointer;
+    background: 0;
+    border: 0;
+    padding: 0;
+    color: var(--Dred);
+  }
+  
+  .btn.create {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-right: 0.25em;
+    transition: opacity 250ms ease-in;
+  }
+  
+  .btn.create:hover {
+    opacity: 0.7;
+  }
+  
+  .btn.delete {
+    opacity: 0.7;
+    font-size: 1rem;
+    transition: color 200ms;
+  }
+  
+  .btn.delete:hover {
+    color: var(--Ateal);
+  }
+
+  .new {
+    background: none;
+    border: 1px;
+    left: 0;
+    color: inherit;
+    border-bottom: 1px solid currentColor;
+    font-size: inherit;
+    outline: none;
+    padding: 0.25em;
+    transition: border-bottom 150ms ease-in;
+    overflow: hidden;
+    order: 2;
+  }
+  
+  .new::-webkit-input-placeholder {
+    opacity: 0.4;
+    /* color: var(--Ateal); */
+  }
+  
+  .new:-ms-input-placeholder {
+    opacity: 0.4;
+  }
+  
+  .new::-ms-input-placeholder {
+    opacity: 0.4;
+  }
+  
+  .new::placeholder {
+    opacity: 0.4;
+  }
+  
+  .new:focus {
+    border-bottom-width: 3px;
+  }
+  
+  .new:focus::-webkit-input-placeholder {
+    opacity: 0.15;
+  }
+  
+  .new:focus:-ms-input-placeholder {
+    opacity: 0.15;
+  }
+  
+  .new:focus::-ms-input-placeholder {
+    opacity: 0.15;
+  }
+  
+  .new:focus::placeholder {
+    opacity: 0.15;
+  }
+  
+  .new.list {
+    font-size: 1.1rem;
+    position: bottom;
+  }
+  
+  .new.task {
+    margin-bottom: 0;
+    /* need to control size */
+    overflow: hidden;
+    /* color: var(--Ateal); */
+   /* background-image: url(https://media.istockphoto.com/id/1286131932/photo/an-old-paper-scroll-sealed-with-a-wax-seal-the-manuscript-is-rolled-up-and-sealed.jpg?s=612x612&w=0&k=20&c=kLYgSKXMEZ8ElDPDs1IDskLkfmNUKs4_GR4AUBLJuoI=);*/
+  }
+
+.one{
+    /* grid-column-start: 1;
+    grid-column-end: 3; 
+    same as*/
+    grid-column: 1 / 9;
+}
+
+.two{
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+    /* --spacer: 2rem;  */
+  /* grid-area: lists; */
+  /* background: var(--clr-light);
+  color: var(--clr-dark); */
+    margin: 0;
+    background-image: url(https://wiki.mabinogiworld.com/images/c/ce/Quest_Scroll.png);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover; 
+    min-height: 50vh;
+    min-width: 10vw;
+  /* clip-path: inset(0 4.4px); */
+  /* margin-right: 1rem; */
+}
+
+.task-list {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    list-style: circle;
+    padding-left: 1.1em;
+    margin: 0;
+    /*background-image: url(https://i.pinimg.com/736x/54/60/4d/54604d82a1a51d70fca984255767c51c.jpg);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;*/
+  }
+  
+  .list-name {
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  .list-name:hover {
+    opacity: 0.7;
+  }
+
+
+.three{
+  grid-column: 6 / 8;
+  grid-row: 2 / 4;
+    /* --spacer: 1.5rem; */
+  /* grid-area: active;
+  background: var(--clr-light);
+  color: var(--clr-dark); */
+  background-image: url(https://thumbs.dreamstime.com/b/diploma-certificate-ribbon-wax-seal-14217954.jpg);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  border: 2px red solid;
+  box-sizing: border-box;
+  /* margin-left: 12rem; */
+  /* min-width: 1vw; */
+  /* z-index: 1; */
+
+  /* grid-area: active;
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    background-image: url(https://thumbs.dreamstime.com/b/diploma-certificate-ribbon-wax-seal-14217954.jpg);
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-position: center;
+    background-size: cover;
+    border: 2px red solid;
+    box-sizing: border-box;
+   margin-left: 12rem; 
+    min-width: 1vw; */
+}
+
+.todo-header{
+  /* padding: 3.5rem; */
+  /* background: #e4e4e4; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGUXN9s4s3zWnfDgKvx2CYBlxF0zDaTD7rdafHWdfF4taHb7kGwzk9XoCvSaNrYwRo6Nk&usqp=CAU);
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(255, 207, 145);
+  background-blend-mode: darken;
+  border-bottom: 3px var(--Vred) solid;
+  position: relative;
+  min-height: 15vh;
+}
+
+.list-title {
+  margin: 0 1em 0 0;
+  color: var(--Vred) ;
+  position: absolute;
+  bottom: 0;
+  left: 3px;
+}
+
+.task-count {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--Dred);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  letter-spacing: -0.4px;
+}
+
+.todo-body {
+  padding: var(--spacer);
+  position: relative;
+}
+
+.new-task-creator .create {
+  color: rgb(22, 206, 206);
+}
+
+[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.task label {
+  display: flex-inline;
+  align-items: center;
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+.task {
+  position: relative;
+  margin-bottom: 1.25em;
+}
+
+.task::after {
+  content: ""; 
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -0.5em;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.1;
+}
+
+.custom-checkbox {
+  --size: 0.75em;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  margin-right: var(--size);
+  padding-left: 5px;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.task:hover .custom-checkbox,
+[type="checkbox"]:focus + label .custom-checkbox {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: var(--Ateal);
+}
+
+[type="checkbox"]:checked + label .custom-checkbox {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  box-shadow: inset 0 0 0px 2px white;
+}
+
+[type="checkbox"]:checked + label {
+  opacity: 0.5;
+}
+
+.task label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 1.5em;
+  top: 50%;
+  height: 3px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+[type="checkbox"]:checked + label::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.active-list {
+    font-weight: 700;
+    /*background-image: url(https://media.istockphoto.com/id/1286131932/photo/an-old-paper-scroll-sealed-with-a-wax-seal-the-manuscript-is-rolled-up-and-sealed.jpg?s=612x612&w=0&k=20&c=kLYgSKXMEZ8ElDPDs1IDskLkfmNUKs4_GR4AUBLJuoI=);*/
+}
+
+.delete-stuff {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  /* width: 100%;
+  left: 0;
+  bottom: -35px; 
+  /* color: var(--clr-light); */ 
+}
+
+/*tally counter*/
+.four{
+  grid-column: 1 / 9;
+  grid-row: 5;
+  display: flex;
+  /* align-items: flex-end; */
+  color: var(--gold2);
+  border: 2px rgba(245,200,94,255) solid;
+  background-color: rgba(0, 0, 0, 0.75);
+  /* background-image: url(https://videohive.img.customer.envatousercontent.com/files/4dac9bb4-1d1f-4c17-8056-c36cc7adc163/inline_image_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=a7b5b2ad9922695e78ba423c7086439a); */
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-evenly;
+  gap: 10em;
+}
+
+.completed-quests {
+  border: white;
+}
+
+.container {
+  width: 28vmin;
+  height: 28vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1em 0;
+  position: relative;
+  font-size: 16px;
+  border-radius: 0.5em;
+  /* background-color: rgba(0, 0, 0, 0.75); */
+  /* border-bottom: 10px solid #18f98f; */
+  /* border: 2px rgba(245,200,94,255) solid; */
+}
+
+/* i {
+  color: #18f98f;
+  font-size: 2.5em;
+  text-align: center;
+} */
+
+span.text {
+  color: whitesmoke;
+  font-size: 1.45em;
+  text-align: center;
+  pad: 0.7em 0;
+  font-weight: 800;
+  /* line-height: 0; */
+}
+
+span.num {
+  color: rgba(245,200,94,255);
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 3em;
+}

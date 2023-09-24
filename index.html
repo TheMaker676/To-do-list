@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS Grid</title>
+    <link rel="stylesheet"
+    herf="background_style.css">
+    <link rel="stylesheet" href="stylesheet.css"/>
+    <script defer src="script.js"></script>
+    <!-- <style>body{
+        color: #fff;
+        text-align: center;
+    }
+    
+    #content{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    
+    #content div{
+        background: #3bbced;
+        padding: 30px;
+    }
+    
+    #content div:nth-child(even){
+        background: #777;
+    }
+    </style> -->
+</head>
+
+ <!-- START NAV -->
+
+ <nav id="navbar" class="nav">
+  <!-- <ul class="nav-list">
+    <li>
+      <a href="#welcome-section">Welcome</a>
+    </li>
+    <li>
+      <a href="#projects">Projects</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul> -->
+  <h2 class="title">Current Quests</h2>
+</nav>
+
+<body>
+    <div id="content">
+
+        <div class="one"></div>
+        
+        <div class="two">
+            <h2 class="task-list-title">My Quests</h2>
+      <ul class="task-list" data-lists></ul>
+
+      <form action="" data-new-list-form>
+        <input 
+          type="text"
+          class="new list"
+          data-new-list-input
+          placeholder="new quest name"
+          aria-label="new quuest name"
+        />
+        <button class="btn create" aria-label="create new list">+</button>
+      </form>
+        </div>
+
+        <div class="three" data-list-display-container>
+            <div class="todo-header">
+                <h2 class="list-title" data-list-title>YouTube</h2>
+                <div class="task-count" data-list-count>3 tasks remaining</div>
+              </div>
+        
+              <div class="todo-body">
+                <div class="tasks" data-tasks></div>
+        
+                <div class="new-task-creator">
+                    <form action="" data-new-task-form>
+                        <input 
+                          type="text"
+                          data-new-task-input
+                          class="new task"
+                          placeholder="new task name"
+                          aria-label="new task name"
+                        />
+                        <button class="btn create" aria-label="create new task">+</button>
+                      </form>
+                </div>
+        
+                <div class="delete-stuff">
+                  <button class="btn delete" onclick="totalPoint(1)" data-clear-complete-tasks-button>Clear completed tasks</button>
+                  <button class="btn delete" onclick="totalQpoint(1)" data-delete-list-button>Delete list</button>
+                </div>
+              </div>
+        </div>
+        
+        <div class="four">
+          <div class="container">
+            <span class="text">Quests Completed</span>
+            <span id="totalQpoints" class="num" data-val="280">000</span>
+        </div>
+
+        <div class="container">
+          <span class="text">Tasks Completed</span>
+          <span id="totalPoints" class="num" data-task-completed="400">000</span>
+        </div>
+      </div>
+        
+
+    </div>
+    <template id="task-template">
+      <div class="task">
+        <input type="checkbox" />
+        <label>
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </template>
+</body>
+</html>
